@@ -14,22 +14,28 @@
 
     <form action="/pegawai/store" method="post" class="form-horizontal">
         {{ csrf_field() }}
-        <div class="form-group row">
-            <label for="nama" class="col-xs-3 col-form-label mr-2">Nama</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="nama" name="nama">
-            </div>
+
+        <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
         </div>
-        Nama <input type="text" name="nama"> <br />
-        <div class="form-group row">
-            <label for="jabatan" class="col-xs-3 col-form-label mr-2">Jabatan</label>
-            <div class="col-xs-9">
-                <input type="text" class="form-control" id="jabatan" name="jabatan">
-            </div>
+
+        <div class="form-group">
+            <label for="jabatan">Jabatan</label>
+            <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Jabatan">
         </div>
-        Jabatan <input type="text" name="jabatan"> <br />
-        Umur <input type="number" name="umur"> <br />
-        Alamat <textarea name="alamat"></textarea> <br />
-        <input type="submit" value="Simpan Data">
+
+        <div class="form-group">
+            <label for="umur">Umur</label>
+            <input type="number" class="form-control" id="umur" name="umur" placeholder="Umur">
+        </div>
+
+        <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <textarea class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" value="Simpan Data">Simpan Data</button>
     </form>
+
 @endsection
