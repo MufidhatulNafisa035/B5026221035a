@@ -7,8 +7,6 @@
 	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
 	<h3>View Pegawai</h3>
 
-	<a href="/pegawai">Kembali</a>
-
 	<br/>
 	<br/>
 
@@ -21,7 +19,7 @@
                 <div class="row justify-content-center">
                     <div class="card-group">
                         <div class="card" style="width:400px">
-                          
+
                         </div>
 
 
@@ -56,7 +54,7 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <a href="/pegawai" class="btn btn-info">OK</a>
+                                    <a href="/pegawai" class="btn btn-primary">OK</a>
                                 </div>
                             </div>
 

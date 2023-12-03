@@ -13,8 +13,8 @@ class PegawaiController extends Controller
     	// mengambil data dari table pegawai
 		//$pegawai = DB::table('pegawai')->get();
         $pegawai = DB::table('pegawai')
-        ->orderBy('pegawai_nama', 'asc')
-        ->paginate(10);
+                    ->orderBy('pegawai_nama', 'asc')
+                    ->paginate(10);
 
     	// mengirim data pegawai ke view index
 		return view('index',['pegawai' => $pegawai]);
@@ -94,11 +94,12 @@ class PegawaiController extends Controller
 
 	}
 
-    public function views($id)
+    // method untuk view data pegawai
+	public function views($id)
 	{
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
-		// passing data pegawai yang didapat ke view views.blade.php
+		// passing data pegawai yang didapat ke view view.blade.php
 		return view('views',['pegawai' => $pegawai]);
 
 	}

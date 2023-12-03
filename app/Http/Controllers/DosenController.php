@@ -15,10 +15,10 @@ class DosenController extends Controller
     }
 
     public function biodata(){
-    	$nama = "Diki Alfarabi Hadi";
+        $nama = "Diki Alfaribi Hadi";
         $alamat = "Surabaya";
         $umur = 18;
-    	return view('biodata',['nama' => $nama , 'alamat' => $alamat , 'umur' => $umur]);
+        return view('biodata', ['nama' => $nama, 'alamat' => $alamat, 'umur' => $umur]);
     }
 
     public function showjam($jam){ //parameter function berupa primitive data type
@@ -26,7 +26,6 @@ class DosenController extends Controller
     }
 
     public function formulir(){
-
     	return view('formulir');
     }
 
@@ -34,6 +33,8 @@ class DosenController extends Controller
         $nama = $request->input('nama');
      	$alamat = $request->input('alamat');
         $nrp = $request->input('nrp');
-        return "Anda telah mengisikan :<br>Nama : ".$nama.", Alamat : ". $alamat . ", NRP : " . $nrp . "<br>" . $request;
+        return "Anda telah mengisikan :<br>Nama : ".$nama.", Alamat : ".$alamat.", NRP : ".$nrp."<br>".$request;
     }
+
 }
+
