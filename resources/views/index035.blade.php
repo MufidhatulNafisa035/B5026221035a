@@ -31,7 +31,7 @@
                 <td>{{ $s->merksepatu}}</td>
                 <td>{{ $s->stocksepatu }}</td>
                 <td>
-                    <input type="checkbox" disabled {{ $s->tersedia == 1 ? 'checked' : '' }}>|
+                    <input type="checkbox" disabled {{ $s->tersedia == 1 ? 'checked' : '' }}>
                 </td>
                 <td>
                     <a href="/sepatu/edit035/{{ $s->kodesepatu }}" class="btn btn-warning">Edit</a>
