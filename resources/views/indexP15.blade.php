@@ -6,7 +6,7 @@
 
     <h3>Keranjang Belanja</h3>
 
-    <a href="/keranjangbelanja/beli" class="btn btn-primary">Beli</a>
+    <a href="/keranjangbelanja/beli" class="btn btn-primary">+ Beli Barang</a>
 
     <br />
     <br />
