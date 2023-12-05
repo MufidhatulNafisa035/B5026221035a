@@ -96,8 +96,13 @@ Route::get('/pegawai/views/{id}','App\Http\Controllers\PegawaiController@views')
 
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 
-//route pertemuan 15
+//route 5 des cewe
 Route::get('/keranjangbelanja','App\Http\Controllers\KPController@indexP15');
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KPController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KPController@store');
 Route::get('/keranjangbelanja/batal/{id}','App\Http\Controllers\KPController@batal');
+
+//route 5 des cowo
+Route::get('/nilaikuliah', 'App\Http\Controllers\NilaiKuliah@NilaiKuliah');
+Route::get('/nilaikuliah/tambahnilai','App\Http\Controllers\NilaiKuliah@tambahnilai');
+Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliah@store');
