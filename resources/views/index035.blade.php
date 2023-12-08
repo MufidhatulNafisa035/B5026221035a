@@ -6,13 +6,13 @@
 
     <h3>Data Sepatu</h3>
 
-    <a href="/sepatu/stock" class="btn btn-primary">+ Stock Sepatu</a>
+    <a href="/sepatu/stock" class="btn btn-primary">+ Stock Sepatu</a><br>
 
     <br />
     <p>Cari Sepatu berdasarkan Merk :</p>
     <form action="/sepatu/cari" method="GET">
         <input class="form-control" type="text" name="cari" placeholder="Cari Sepatu .."
-            value="{{ old('cari', isset($cari) ? $cari : '') }}">
+            value="{{ old('cari', isset($cari) ? $cari : '') }}"><br>
         <input class="btn btn-primary" type="submit" value="CARI">
     </form>
     <br />
@@ -34,6 +34,8 @@
                     <input type="checkbox" disabled {{ $s->tersedia == 1 ? 'checked' : '' }}>
                 </td>
                 <td>
+                    <a href="/sepatu/views035/{{ $s->kodesepatu }}" class="btn btn-success">View</a>
+                    |
                     <a href="/sepatu/edit035/{{ $s->kodesepatu }}" class="btn btn-warning">Edit</a>
                     |
                     <a href="/sepatu/hapus/{{ $s->kodesepatu }}" class="btn btn-danger">Hapus</a>

@@ -7,13 +7,13 @@
     <h2>www.malasngoding.com</h2>
     <h3>Data Pegawai</h3>
 
-    <a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a>
+    <a href="/pegawai/tambah" class="btn btn-primary"> + Tambah Pegawai Baru</a><br>
 
     <br />
     <p>Cari Data Pegawai berdasarkan Nama :</p>
     <form action="/pegawai/cari" method="GET">
         <input class="form-control" type="text" name="cari" placeholder="Cari Pegawai .."
-            value="{{ old('cari', isset($cari) ? $cari : '') }}">
+            value="{{ old('cari', isset($cari) ? $cari : '') }}"><br>
         <input class="btn btn-primary" type="submit" value="CARI">
     </form>
     <br />

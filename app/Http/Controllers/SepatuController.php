@@ -11,7 +11,7 @@ class SepatuController extends Controller
 	public function index035()
     {
     // mengambil data dari table sepatu dan mengurutkannya secara ascending berdasarkan kodesepatu
-    $sepatu = DB::table('sepatu')->orderBy('kodesepatu', 'asc')->get();
+    $sepatu = DB::table('sepatu')->orderBy('merksepatu', 'asc')->get();
 
     // mengirim data sepatu ke view index
     return view('index035', ['sepatu' => $sepatu]);
@@ -89,5 +89,13 @@ class SepatuController extends Controller
 
 	}
 
+    public function views035($id)
+	{
+		// mengambil data pegawai berdasarkan id yang dipilih
+		$sepatu = DB::table('sepatu')->where('kodesepatu',$id)->get();
+		// passing data pegawai yang didapat ke view view.blade.php
+		return view('views035',['sepatu' => $sepatu]);
+
+	}
 
 }
