@@ -116,3 +116,13 @@ Route::post('/sepatu/update','App\Http\Controllers\SepatuController@update');
 Route::get('/sepatu/hapus/{id}','App\Http\Controllers\SepatuController@hapus');
 Route::get('/sepatu/cari','App\Http\Controllers\SepatuController@cari');
 Route::get('/sepatu/views035/{id}','App\Http\Controllers\SepatuController@views035');
+
+//route tugas 5 des
+Route::get('/counter','App\Http\Controllers\EASController@indexEAS');
+Route::get('/counter/tambahEAS','App\Http\Controllers\EASController@tambahEAS');
+Route::post('/counter/store','App\Http\Controllers\EASController@store');
+Route::get('/counter/editEAS/{id}','App\Http\Controllers\EASController@editEAS');
+Route::post('/counter/update','App\Http\Controllers\EASController@update');
+Route::get('/counter/hapus/{id}','App\Http\Controllers\EASController@hapus');
+Route::get('/counter/cari','App\Http\Controllers\EASController@cari');
+Route::get('/counter/viewsEAS/{id}','App\Http\Controllers\EASController@viewsEAS');

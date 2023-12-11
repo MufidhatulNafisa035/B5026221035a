@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'Edit Stock Sepatu')
+@section('title', 'Edit Jumlah')
 
 @section('konten')
     <h3>Edit Stock Sepatu</h3>
