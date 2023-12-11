@@ -10,14 +10,18 @@ class EASController extends Controller
 {
 	public function indexEAS()
     {
-    // mengambil data dari table counter dan mengurutkannya secara ascending berdasarkan ID
-    $counter = DB::table('counter')->orderBy('ID', 'asc')->get();
+        // Fetch the counters ordered by ID
+        $counters = DB::table('counter')->orderBy('ID', 'asc')->get();
 
-     // increment the counter_views session
-     session()->increment('counter_views');
+        // Fetch the total count
+        $Jumlah = DB::table('counter')->first()->Jumlah ?? 0; // Use null coalescing operator to handle null case
+        $Jumlah++; // Increment the count
 
-    // mengirim data counter ke view index
-    return view('indexEAS', ['counter' => $counter]);
+        // Update the count in the counter table
+        DB::table('counter')->update(['Jumlah' => $Jumlah]);
+
+        // Pass the count and counters to the view
+        return view('indexEAS', compact('Jumlah', 'counters'));
     }
 
 

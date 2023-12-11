@@ -1,12 +1,13 @@
-@extends('master')
+@extends('masterEAS')
 
 @section('title', 'Counter')
 
 @section('konten')
 
-    <h3>Data Counter</h3>
+    <h2>Anda telah membuka URL ini sebanyak {{ $Jumlah }} kali</h2>
 
-    <p for="counter_views">Anda telah membuka URL ini sebanyak {{ session('counter_views') }} kali</p>
+    {{--
+    <h3>Data Counter</h3>
 
     <a href="/counter/tambahEAS" class="btn btn-primary">+ Tambah Counter</a><br>
 
@@ -25,18 +26,21 @@
             <th>Jumlah</th>
             <th>Action</th>
         </tr>
-        @foreach ($counter as $c)
+        @foreach ($counter as $counter)
             <tr>
-                <td>{{ $c->ID }}</td>
-                <td>{{ $c->Jumlah}}</td>
+                <td>{{ $counter->ID }}</td>
+                <td>{{ $counter->Jumlah}}</td>
                 <td>
-                    <a href="/counter/viewsEAS/{{ $c->ID }}" class="btn btn-success">View</a>
+                    <a href="/counter/viewsEAS/{{ $counter->ID }}" class="btn btn-success">View</a>
                     |
-                    <a href="/counter/editEAS/{{ $c->ID }}" class="btn btn-warning">Edit</a>
+                    <a href="/counter/editEAS/{{ $counter->ID }}" class="btn btn-warning">Edit</a>
                     |
-                    <a href="/counter/hapus/{{ $c->ID }}" class="btn btn-danger">Hapus</a>
+                    <a href="/counter/hapus/{{ $counter->ID }}" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>
         @endforeach
     </table>
+
+    --}}
+
 @endsection
